@@ -14,7 +14,6 @@ for letter in letters:
     for i in tr:
         player_details = {}
         Name_list = list(reversed(i.find('a').text.split(',')))
-        Name_list[0] = Name_list[0].replace(" ", "")
         player_details['name'] = Name_list[0] + " " + Name_list[1]
         players.append(player_details)
         print(player_details['name'])
