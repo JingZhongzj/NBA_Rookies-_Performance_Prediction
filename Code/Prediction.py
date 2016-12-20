@@ -12,9 +12,9 @@ if __name__ == "__main__":
 
     # Load training data
     data = spark.read.format("libsvm")\
-        .load("/Users/zhongjing/Training_data.txt")
+        .load("/Path_to_Training_data/Training_data.txt")
     rookie = spark.read.format("libsvm")\
-        .load("/Users/zhongjing/Predict_2017.txt")
+        .load("/Path_to_Data_for_Prediction/Prediction_data.txt")
     # Split the data into train and test
     splits = data.randomSplit([0.8, 0.2], 1234)
     train = splits[0]
